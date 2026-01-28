@@ -1,16 +1,18 @@
 ﻿using System.Data;
 
-class program {
-    static List<TodoTask> tasks = new List<ThreadPool>();
-static void Main(){
-
-Menu menu = new Menu();
-menu.ShowWelcomeMessage();
-
-if(true)
+class program
 {
-    Console.Clear();
-    menu.ShowMainMenu();
-}
-   }
+    static List<TodoTask> tasks = new List<ThreadPool>();
+    static void Main()
+    {
+
+        Menu menu = new Menu();
+        menu.ShowWelcomeMessage();
+
+        if (true)
+        {
+            Console.Clear();
+            menu.ShowMainMenu();
+        }
+    }
 }
