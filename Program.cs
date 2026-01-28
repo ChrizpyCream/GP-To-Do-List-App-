@@ -1,31 +1,35 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
 
-class program {
-    static List<TodoTask> tasks = new List<ThreadPool>();
-static void Main(){
+namespace TodoApp
+{
+    class Program
+    {
+        static List<TodoTask> tasks = new List<TodoTask>();
 
-Menu menu = new Menu();
-menu.ShowWelcomeMessage();
-
-    while ( true )
+        static void Main()
         {
-            
-            Console.Clear();
-            Console.WriteLine("Todo list");
-            Console.WriteLine("1.add task");
-            Console.WriteLine("2.remove task");
-            Console.WriteLine("3.mark task as complete ");
-            Console.WriteLine("4. veiw tasks ");
-            Console.WriteLine("5. Exit ");
-            Console.WriteLine("5.choose an exit option  ");
+            Menu menu = new Menu();
+            menu.ShowWelcomeMessage();
 
+            while (true)
+            {
+                Console.WriteLine("1. Add Task");
+                Console.WriteLine("2. Remove Task");
+                Console.WriteLine("3. Mark Task Complete");
+                Console.WriteLine("4. View Tasks");
+                Console.WriteLine("5. Exit");
 
+                string choice = Console.ReadLine();
 
-
+               // if (choice == "1") AddTask();                 //
+               // else if (choice == "2") RemoveTask();   //
+               // else if (choice == "3") CompleteTask();//
+               // else if (choice == "4") DisplayTasks();//
+               // else if (choice == "5") break;//
+            }
         }
 
-
-
+        
     }
 }
-
