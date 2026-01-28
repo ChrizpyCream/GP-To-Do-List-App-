@@ -16,4 +16,16 @@ public class Menu
         System.Console.WriteLine("Please press any key to continue...");
         Console.ReadKey(true);
     }
+
+    public void ShowMainMenu()
+    {
+        System.Console.WriteLine("Please enter the number of your choice:" + "\n");
+        System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧");
+        System.Console.WriteLine("⋄    1. Add a new task    ⋄");
+        System.Console.WriteLine("⋆    2. View all tasks.   ⋆");
+        System.Console.WriteLine("⋅    3. Remove a task.    ⋅");
+        System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧");
+
+        char choice = Console.ReadKey().KeyChar;
+    }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GP-To-Do-List-App-")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bec06a5fb15c7d5d3c4c6e71eefcfccd85e2114c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eb7f3d5d72b83eff5513c78a4b09eb4db8a2d71")]
 [assembly: System.Reflection.AssemblyProductAttribute("GP-To-Do-List-App-")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GP-To-Do-List-App-")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
