@@ -7,18 +7,22 @@ namespace TodoApp
     {
         static List<TodoTask> tasks = new List<TodoTask>();
 
+<<<<<<< HEAD
         static void Main()
-        {
+        {   //adding the menu from Menu.cs
             Menu menu = new Menu();
             menu.ShowWelcomeMessage();
 
             while (true)
             {
-                Console.WriteLine("1. Add Task");
-                Console.WriteLine("2. Remove Task");
-                Console.WriteLine("3. Mark Task Complete");
-                Console.WriteLine("4. View Tasks");
-                Console.WriteLine("5. Exit");
+               Console.WriteLine("Please enter the number of your choice:" + "\n");
+        Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧");
+        Console.WriteLine("⋄    1. Add a new task                   ⋄");
+        Console.WriteLine("⋆    2. Remove a task.                   ⋆");
+        Console.WriteLine("⋅    4. Marked task as completed.         ⋅");
+        Console.WriteLine("⋆    3. View all tasks.                  ⋆");
+        Console.WriteLine("⋄    5. Exit.                            ⋄");
+        Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧");
 
                 string choice = Console.ReadLine();
 
@@ -32,4 +36,15 @@ namespace TodoApp
 
         
     }
+=======
+Menu menu = new Menu();
+menu.ShowWelcomeMessage();
+
+if(true)
+{
+    Console.Clear();
+    menu.ShowMainMenu();
+}
+   }
+>>>>>>> 4ec2346ef3779fd58d99b4ef2fbed7226ab667a8
 }
