@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\paola\\.nuget\\packages\\": {}
+    "C:\\Users\\xxlaz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
+      "projectUniqueName": "C:\\Users\\xxlaz\\Softwareintro\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
       "projectName": "GP-To-Do-List-App-",
-      "projectPath": "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
-      "packagesPath": "C:\\Users\\paola\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\obj\\",
+      "projectPath": "C:\\Users\\xxlaz\\Softwareintro\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
+      "packagesPath": "C:\\Users\\xxlaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xxlaz\\Softwareintro\\GP-To-Do-List-App-\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\paola\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\xxlaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
