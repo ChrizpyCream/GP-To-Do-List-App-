@@ -11,10 +11,10 @@ What is blocking me?
 
 28/01/206
 What did I work on?
-    We started
+    We started to code interface and the logic.
 
 What will I work on next?
-    
+    We will work on the logic more.
 
 What is blocking me?
-    
+    Nothing for now.
