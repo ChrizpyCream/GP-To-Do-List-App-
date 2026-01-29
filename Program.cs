@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
+<<<<<<< HEAD
 namespace TodoApp
 {
     class Program
     {
         static List<TodoTask> tasks = new List<TodoTask>();
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
         static void Main()
         {   //adding the menu from Menu.cs
             Menu menu = new Menu();
@@ -47,4 +48,21 @@ if(true)
 }
    }
 >>>>>>> 4ec2346ef3779fd58d99b4ef2fbed7226ab667a8
+=======
+class program
+{
+    static List<TodoTask> tasks = new List<ThreadPool>();
+    static void Main()
+    {
+
+        Menu menu = new Menu();
+        menu.ShowWelcomeMessage();
+
+        if (true)
+        {
+            Console.Clear();
+            menu.ShowMainMenu();
+        }
+    }
+>>>>>>> 5c4ba5c13b84fc9b2dd5f57a0f67dcd9d823446f
 }
