@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-<<<<<<< HEAD
 namespace TodoApp
 {
     class Program
@@ -37,18 +36,8 @@ namespace TodoApp
 
         
     }
-=======
-Menu menu = new Menu();
-menu.ShowWelcomeMessage();
-
-if(true)
-{
-    Console.Clear();
-    menu.ShowMainMenu();
 }
-   }
->>>>>>> 4ec2346ef3779fd58d99b4ef2fbed7226ab667a8
-=======
+//=======
 class program
 {
     static List<TodoTask> tasks = new List<ThreadPool>();
@@ -64,5 +53,5 @@ class program
             menu.ShowMainMenu();
         }
     }
->>>>>>> 5c4ba5c13b84fc9b2dd5f57a0f67dcd9d823446f
+//>>>>>>> 5c4ba5c13b84fc9b2dd5f57a0f67dcd9d823446f
 }
