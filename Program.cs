@@ -10,7 +10,7 @@ namespace TodoApp
 
 //<<<<<<< HEAD
         static void Main()
-        {   //adding the menu from Menu.cs
+        {   //adding the menu from Menu.cs testing 
             Menu menu = new Menu();
             menu.ShowWelcomeMessage();
 
