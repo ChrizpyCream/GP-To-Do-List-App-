@@ -7,6 +7,7 @@ class Program
     static List<TodoTask> tasks = new List<TodoTask>();
     static void Main()
     {
+
         Menu menu = new Menu();
         menu.ShowWelcomeMessage();
 
