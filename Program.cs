@@ -84,7 +84,7 @@ namespace TodoApp
                 Console.WriteLine("Task added with due date");
             }
 
-            Console.WriteLine("Press any key to continue");
+            Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
 
@@ -156,7 +156,7 @@ namespace TodoApp
 
             if (tasks.Count == 0)
             {
-                Console.WriteLine("No tasks yet");
+                Console.WriteLine("No tasks yet.");
                 return;
             }
 
