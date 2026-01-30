@@ -75,7 +75,7 @@ namespace TodoApp
                 Console.WriteLine("Task added");
             }
 
-            Console.WriteLine("Press any key to continue");
+            Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
 
