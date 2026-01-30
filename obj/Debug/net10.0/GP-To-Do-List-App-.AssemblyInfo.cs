@@ -14,6 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c4ba5c13b84fc9b2dd5f57a0f67dcd9d823446f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b244aea8dfca89750402bfab420e699295ab983d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GP-To-Do-List-App-")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GP-To-Do-List-App-")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
