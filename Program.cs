@@ -22,12 +22,6 @@ namespace TodoApp
 
                 string choice = Console.ReadLine();
 
-                // if (choice == "1") AddTask();                 //
-                // else if (choice == "2") RemoveTask();   //
-                // else if (choice == "3") CompleteTask();//
-                // else if (choice == "4") DisplayTasks();//
-                // else if (choice == "5") break;//
-
                 switch (choice)
                 {
                     case "1":
@@ -147,7 +141,7 @@ namespace TodoApp
 
             if (tasks.Count == 0)
             {
-                Console.WriteLine("No tasks yet");
+                Console.WriteLine("No tasks yet.");
                 return;
             }
 
