@@ -23,12 +23,6 @@ namespace TodoApp
 
                 string choice = Console.ReadLine();
 
-                // if (choice == "1") AddTask();                 //
-                // else if (choice == "2") RemoveTask();   //
-                // else if (choice == "3") CompleteTask();//
-                // else if (choice == "4") DisplayTasks();//
-                // else if (choice == "5") break;//
-
                 switch (choice)
                 {
                     case "1":
@@ -41,7 +35,7 @@ namespace TodoApp
 
                     case "3":
                         ViewTasks();
-                        Console.WriteLine("\nPress any key");
+                        Console.WriteLine("Press any key to return to the main menu");
                         Console.ReadKey();
                         break;
 
@@ -51,12 +45,12 @@ namespace TodoApp
 
                     case "5":
                         running = false;
-                        Console.WriteLine("\nBye");
+                        Console.WriteLine("\nBye.");
+                        Environment.Exit(0);
                         break;
 
                     default:
-                        Console.WriteLine("\nPlease enter a number between 1 and 5.");
-                        Console.WriteLine("Press any key to continue");
+                        Console.WriteLine("Please enter a number between 1 and 5.");
                         Console.ReadKey();
                         break;
                 }
@@ -71,7 +65,7 @@ namespace TodoApp
             System.Console.WriteLine("Enter due date (yyyy-mm-dd) or enter for default (7 days): ");
             string dueDateInput = Console.ReadLine();
 
-            if(string.IsNullOrEmpty(dueDateInput))
+            if(string.IsNullOrWhiteSpace(dueDateInput))
             {
                 DateTime defaultDueDate = DateTime.Now.AddDays(7);
                 TodoTask newTask = new TodoTask(taskDescription, defaultDueDate);
