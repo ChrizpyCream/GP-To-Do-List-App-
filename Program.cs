@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualBasic;
 
-namespace TodoApp
-{
+
     class Program
     {
         static List<TodoTask> tasks = new List<TodoTask>();
@@ -187,4 +186,3 @@ namespace TodoApp
             }
         }
     }
-}
