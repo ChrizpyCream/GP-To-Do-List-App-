@@ -7,16 +7,15 @@ namespace TodoApp
     class Program
     {
         static List<TodoTask> tasks = new List<TodoTask>();
-
-        //<<<<<<< HEAD
         static void Main()
-        {   //adding the menu from Menu.cs testing 
+        {
+
             Menu menu = new Menu();
             menu.ShowWelcomeMessage();
 
             bool running = true;
 
-            while (true)
+            while (running)
             {
                 Console.Clear();
                 menu.ShowMainMenu();
@@ -35,8 +34,8 @@ namespace TodoApp
 
                     case "3":
                         ViewTasks();
-                        Console.WriteLine("Press any key to return to the main menu");
-                        Console.ReadKey();
+                        Console.WriteLine("Press any key to return to the main menu.");
+                        Console.ReadKey(true);
                         break;
 
                     case "4":
@@ -45,13 +44,14 @@ namespace TodoApp
 
                     case "5":
                         running = false;
-                        Console.WriteLine("\nBye.");
+                        Console.Clear();
+                        Console.WriteLine("Bye.");
                         Environment.Exit(0);
                         break;
 
                     default:
                         Console.WriteLine("Please enter a number between 1 and 5.");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         break;
                 }
             }
@@ -59,20 +59,23 @@ namespace TodoApp
 
         static void AddTask()
         {
-            Console.WriteLine("\n--- Add New Task ---");
+            Console.Clear();
+
+            Console.WriteLine("--- Add New Task ---");
             Console.Write("What do you need to do? ");
             string taskDescription = Console.ReadLine();
+
             System.Console.WriteLine("Enter due date (yyyy-mm-dd) or enter for default (7 days): ");
             string dueDateInput = Console.ReadLine();
 
-            if(string.IsNullOrWhiteSpace(dueDateInput))
+            if (string.IsNullOrWhiteSpace(dueDateInput))
             {
                 DateTime defaultDueDate = DateTime.Now.AddDays(7);
                 TodoTask newTask = new TodoTask(taskDescription, defaultDueDate);
                 tasks.Add(newTask);
                 Console.WriteLine("Task added with default due date (7 days)");
             }
-            else if(!DateTime.TryParse(dueDateInput, out DateTime dueDate))
+            else if (!DateTime.TryParse(dueDateInput, out DateTime dueDate))
             {
                 Console.WriteLine("Invalid date format. Please enter a valid date (yyyy-mm-dd).");
                 return;
@@ -81,25 +84,28 @@ namespace TodoApp
             {
                 TodoTask newTask = new TodoTask(taskDescription, dueDate);
                 tasks.Add(newTask);
-                Console.WriteLine("Task added with due date");
+                Console.WriteLine("Task added with due date " + dueDate.ToString("yyyy-MM-dd"));
             }
 
-            Console.WriteLine("Press any key to continue.");
-            Console.ReadKey();
+            Console.WriteLine("Press any key to return to the main menu");
+            Console.ReadKey(true);
         }
 
         static void RemoveTask()
         {
+            Console.Clear();
+
             if (tasks.Count == 0)
             {
-                Console.WriteLine("\nNo tasks to remove");
-                Console.WriteLine("Press any key to continue");
-                Console.ReadKey();
+                Console.WriteLine("No tasks to remove.");
+                Console.WriteLine("Press any key to return to the main menu.");
+                Console.ReadKey(true);
                 return;
             }
 
             ViewTasks();
-            Console.Write("\nEnter task number to remove: ");
+
+            Console.Write("Enter task number to remove: ");
             string input = Console.ReadLine();
 
             int taskNumber;
@@ -112,20 +118,22 @@ namespace TodoApp
             }
             else
             {
-                Console.WriteLine("Invalid number");
+                Console.WriteLine("Invalid number!");
             }
 
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
+            Console.WriteLine("Press any key to return to the main menu.");
+            Console.ReadKey(true);
         }
 
         static void MarkTaskCompleted()
         {
+            Console.Clear();
+
             if (tasks.Count == 0)
             {
-                Console.WriteLine("\nNo tasks completed");
-                Console.WriteLine("Press any key to continue");
-                Console.ReadKey();
+                Console.WriteLine("No tasks completed.");
+                Console.WriteLine("Press any key to return to the main menu.");
+                Console.ReadKey(true);
                 return;
             }
 
@@ -139,40 +147,43 @@ namespace TodoApp
             if (isNumber && taskNumber >= 1 && taskNumber <= tasks.Count)
             {
                 tasks[taskNumber - 1].IsCompleted = true;
-                Console.WriteLine("Task completed");
+                Console.WriteLine("Task completed!");
             }
             else
             {
-                Console.WriteLine("Invalid number");
+                Console.WriteLine("Invalid number!");
             }
 
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
+            Console.WriteLine("Press any key to return to the main menu.");
+            Console.ReadKey(true);
         }
 
         static void ViewTasks()
         {
-            Console.WriteLine("\n--- Your Tasks ---");
+            Console.Clear();
+
+            Console.WriteLine("--- Your Tasks ---");
 
             if (tasks.Count == 0)
             {
                 Console.WriteLine("No tasks yet.");
-                return;
             }
-
-            for (int i = 0; i < tasks.Count; i++)
+            else
             {
-                string status;
-                if (tasks[i].IsCompleted)
+                for (int i = 0; i < tasks.Count; i++)
                 {
-                    status = "[✔️]";
-                }
-                else
-                {
-                    status = "[ ]";
-                }
+                    string status;
+                    if (tasks[i].IsCompleted)
+                    {
+                        status = "[✔️]";
+                    }
+                    else
+                    {
+                        status = "[ ]";
+                    }
 
-                Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}{tasks[i].DueDate.ToString(" (Due: yyyy-MM-dd)")}");
+                    Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}{tasks[i].DueDate.ToString(" (Due: yyyy-MM-dd)")}");
+                }
             }
         }
     }
