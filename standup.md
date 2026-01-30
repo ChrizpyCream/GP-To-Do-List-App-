@@ -29,3 +29,14 @@ What will I work on next?
 
 What is blocking me?
     Nothing for now.
+
+30/01/2026
+
+What did I work on?
+    we refactoring our code
+
+what will I work on next?
+sumbiting assigment 
+
+what is block me?
+    Nothing for now 
