@@ -23,11 +23,9 @@ public class Menu
         System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧");
         System.Console.WriteLine("⋄    1. Add a new task                   ⋄");
         System.Console.WriteLine("⋆    2. Remove a task.                   ⋆");
-        System.Console.WriteLine("⋅    4. Marked task as completed.         ⋅");
         System.Console.WriteLine("⋆    3. View all tasks.                  ⋆");
+        System.Console.WriteLine("⋅    4. Marked task as completed.         ⋅");
         System.Console.WriteLine("⋄    5. Exit.                            ⋄");
         System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧");
-
-        char choice = Console.ReadKey().KeyChar;
     }
 }
