@@ -2,6 +2,7 @@ public class Menu
 {
     public void ShowWelcomeMessage()
     {
+        Console.Clear();
         System.Console.WriteLine(@"
 ───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
 ───█▒▒░░░░░░░░░▒▒█───
@@ -19,13 +20,13 @@ public class Menu
 
     public void ShowMainMenu()
     {
-        System.Console.WriteLine("Please enter the number of your choice:" + "\n");
-        System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧");
-        System.Console.WriteLine("⋄    1. Add a new task                   ⋄");
-        System.Console.WriteLine("⋆    2. Remove a task.                   ⋆");
-        System.Console.WriteLine("⋆    3. View all tasks.                  ⋆");
-        System.Console.WriteLine("⋅    4. Marked task as completed.         ⋅");
-        System.Console.WriteLine("⋄    5. Exit.                            ⋄");
-        System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧");
+        System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧");
+        System.Console.WriteLine("⋄ Please enter the number of your choice: ⋄");
+        System.Console.WriteLine("⋆    1. Add a new task                    ⋆");
+        System.Console.WriteLine("⋅    2. Remove a task.                    ⋅");
+        System.Console.WriteLine("⋅    3. View all tasks.                   ⋅");
+        System.Console.WriteLine("⋆    4. Marked task as completed.         ⋆");
+        System.Console.WriteLine("⋄    5. Exit.                             ⋄");
+        System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧");
     }
 }
