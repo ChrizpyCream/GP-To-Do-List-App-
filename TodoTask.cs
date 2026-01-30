@@ -1,11 +1,13 @@
 public class TodoTask
 {
-    public string Description;
-    public bool IsCompleted;
+    public string Description {get; set;}
+    public bool IsCompleted {get; set;}
+    public DateTime DueDate {get; set;}
     
-    public TodoTask(string description)
+    public TodoTask(string description, DateTime dueDate)
     {
         Description = description;
         IsCompleted = false;
+        DueDate = dueDate;
     }
 }
