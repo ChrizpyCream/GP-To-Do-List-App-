@@ -18,3 +18,14 @@ What will I work on next?
 
 What is blocking me?
     Nothing for now.
+
+29/01/2026
+
+What did I work on?
+    We finished the logic.
+
+What will I work on next?
+    We will work on the UI.
+
+What is blocking me?
+    Nothing for now.

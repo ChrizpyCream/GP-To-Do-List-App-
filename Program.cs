@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.VisualBasic;
 
 namespace TodoApp
 {
@@ -67,12 +68,26 @@ namespace TodoApp
             Console.WriteLine("\n--- Add New Task ---");
             Console.Write("What do you need to do? ");
             string taskDescription = Console.ReadLine();
+            System.Console.WriteLine("Enter due date (yyyy-mm-dd) or enter for default (7 days): ");
+            string dueDateInput = Console.ReadLine();
 
-            if (taskDescription != "")
+            if(string.IsNullOrEmpty(dueDateInput))
             {
-                TodoTask newTask = new TodoTask(taskDescription);
+                DateTime defaultDueDate = DateTime.Now.AddDays(7);
+                TodoTask newTask = new TodoTask(taskDescription, defaultDueDate);
                 tasks.Add(newTask);
-                Console.WriteLine("Task added");
+                Console.WriteLine("Task added with default due date (7 days)");
+            }
+            else if(!DateTime.TryParse(dueDateInput, out DateTime dueDate))
+            {
+                Console.WriteLine("Invalid date format. Please enter a valid date (yyyy-mm-dd).");
+                return;
+            }
+            else
+            {
+                TodoTask newTask = new TodoTask(taskDescription, dueDate);
+                tasks.Add(newTask);
+                Console.WriteLine("Task added with due date");
             }
 
             Console.WriteLine("Press any key to continue");
@@ -163,7 +178,7 @@ namespace TodoApp
                     status = "[ ]";
                 }
 
-                Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}");
+                Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}{tasks[i].DueDate.ToString(" (Due: yyyy-MM-dd)")}");
             }
         }
     }

@@ -1,16 +1,13 @@
-namespace TodoApp
+public class TodoTask
 {
-    public class TodoTask
+    public string Description {get; set;}
+    public bool IsCompleted {get; set;}
+    public DateTime DueDate {get; set;}
+    
+    public TodoTask(string description, DateTime dueDate)
     {
-        public string Description { get; set; }
-        public bool IsCompleted { get; set; }
-        public DateTime DueDate { get; set; }
-
-        public TodoTask(string description)
-        {
-            Description = description;
-            IsCompleted = false;
-            DueDate = DueDate;
-        }
+        Description = description;
+        IsCompleted = false;
+        DueDate = dueDate;
     }
 }
