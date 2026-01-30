@@ -27,7 +27,5 @@ public class Menu
         System.Console.WriteLine("⋅    4. Marked task as completed.         ⋅");
         System.Console.WriteLine("⋄    5. Exit.                            ⋄");
         System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧✧⋄⋆⋅⋆⋄✧");
-
-        char choice = Console.ReadKey().KeyChar;
     }
 }

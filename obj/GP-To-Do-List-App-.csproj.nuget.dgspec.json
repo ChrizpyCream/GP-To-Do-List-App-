@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matia\\Cs2420\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj": {}
+    "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matia\\Cs2420\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj": {
+    "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matia\\Cs2420\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
+        "projectUniqueName": "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
         "projectName": "GP-To-Do-List-App-",
-        "projectPath": "C:\\Users\\matia\\Cs2420\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
-        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matia\\Cs2420\\GP-To-Do-List-App-\\obj\\",
+        "projectPath": "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\GP-To-Do-List-App-.csproj",
+        "packagesPath": "C:\\Users\\paola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\paola\\Documents\\Spring2026\\software\\GP-To-Do-List-App-\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\paola\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
