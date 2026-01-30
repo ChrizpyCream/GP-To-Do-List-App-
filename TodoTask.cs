@@ -6,9 +6,9 @@ namespace TodoApp
         public bool IsCompleted { get; set; }
         public DateTime DueDate { get; set; }
 
-        public TodoTask(string Description)
+        public TodoTask(string description)
         {
-            Description = Description;
+            Description = description;
             IsCompleted = false;
             DueDate = DueDate;
         }
