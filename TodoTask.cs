@@ -1,5 +1,4 @@
-namespace TodoApp
-{
+
 public class TodoTask
 {
     public string Description {get; set;}
@@ -12,5 +11,4 @@ public class TodoTask
         IsCompleted = false;
         DueDate = dueDate;
     }
-}
-}
+  }
