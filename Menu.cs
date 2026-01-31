@@ -27,4 +27,23 @@ public class Menu
         System.Console.WriteLine("⋄    5. Exit.                             ⋄");
         System.Console.WriteLine("✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧");
     }
+
+    public void Pause()
+    {
+        Console.WriteLine("Press any key to return to the main menu.");
+        Console.ReadKey(true);
+    }
+
+    public void Exit()
+    {
+        Console.Clear();
+        Console.WriteLine(@"
+░██████╗░██░░░░░██╗░███████╗
+░██╔══██╗░██░░░██╔╝░██╔════╝
+░██████╔╝░╚██░██╔╝░░█████╗░░
+░██╔══██╗░░║███╔╝░░░██╔══╝░░
+░██████╔╝░░║███║░░░░███████╗
+░╚═════╝░░░╚═══╝░░░░╚══════╝");
+        Environment.Exit(0);
+    }
 }

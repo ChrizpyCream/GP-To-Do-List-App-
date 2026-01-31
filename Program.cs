@@ -5,10 +5,9 @@ using Microsoft.VisualBasic;
 class Program
 {
     static List<TodoTask> tasks = new List<TodoTask>();
+    static Menu menu = new Menu();
     static void Main()
     {
-
-        Menu menu = new Menu();
         menu.ShowWelcomeMessage();
 
         bool running = true;
@@ -32,7 +31,7 @@ class Program
 
                 case "3":
                     ViewTasks();
-                    Pause();
+                    menu.Pause();
                     break;
 
                 case "4":
@@ -40,8 +39,7 @@ class Program
                     break;
 
                 case "5":
-                    running = false;
-                    Exit();
+                    menu.Exit();
                     break;
 
                 default:
@@ -85,10 +83,8 @@ class Program
             }
         }
 
-        TodoTask newTask = new TodoTask(taskDescription, dueDate);
-        tasks.Add(newTask);
-
-        Pause();
+        tasks.Add(new TodoTask(taskDescription, dueDate));
+        menu.Pause();
     }
 
     static void RemoveTask()
@@ -98,7 +94,7 @@ class Program
         if (tasks.Count == 0)
         {
             Console.WriteLine("No tasks to remove.");
-            Pause();
+            menu.Pause();
             return;
         }
 
@@ -120,7 +116,7 @@ class Program
             Console.WriteLine("Invalid number!");
         }
 
-        Pause();
+        menu.Pause();
     }
 
     static void MarkTaskCompleted()
@@ -130,7 +126,7 @@ class Program
         if (tasks.Count == 0)
         {
             Console.WriteLine("No tasks completed.");
-            Pause();
+            menu.Pause();
             return;
         }
 
@@ -151,7 +147,7 @@ class Program
             Console.WriteLine("Invalid number!");
         }
 
-        Pause();
+        menu.Pause();
     }
 
     static void ViewTasks()
@@ -168,37 +164,9 @@ class Program
         {
             for (int i = 0; i < tasks.Count; i++)
             {
-                string status;
-                if (tasks[i].IsCompleted)
-                {
-                    status = "[ ✔️ ]";
-                }
-                else
-                {
-                    status = "[ ]";
-                }
-
+                string status = tasks[i].IsCompleted ? "[✔️ ]" : "[ ]";
                 Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}{tasks[i].DueDate.ToString(" (Due: yyyy-MM-dd)")}");
             }
         }
-    }
-
-    static void Pause()
-    {
-        Console.WriteLine("Press any key to return to the main menu.");
-        Console.ReadKey(true);
-    }
-
-    static void Exit()
-    {
-        Console.Clear();
-        Console.WriteLine(@"
-░██████╗░██░░░░░██╗░███████╗
-░██╔══██╗░██░░░██╔╝░██╔════╝
-░██████╔╝░╚██░██╔╝░░█████╗░░
-░██╔══██╗░░║███╔╝░░░██╔══╝░░
-░██████╔╝░░║███║░░░░███████╗
-░╚═════╝░░░╚═══╝░░░░╚══════╝");
-        Environment.Exit(0);
     }
 }
