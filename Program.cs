@@ -164,7 +164,7 @@ class Program
         {
             for (int i = 0; i < tasks.Count; i++)
             {
-                string status = tasks[i].IsCompleted ? "[ ✔️ ]" : "[ ]";
+                string status = tasks[i].IsCompleted ? "[✔️ ]" : "[ ]";
                 Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}{tasks[i].DueDate.ToString(" (Due: yyyy-MM-dd)")}");
             }
         }
