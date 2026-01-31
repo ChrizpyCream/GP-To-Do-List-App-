@@ -78,7 +78,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Task added with due date " + dueDate.ToString("yyyy-MM-dd"));
+                Console.WriteLine("Task added with due date" + dueDate.ToString("yyyy-MM-dd"));
                 break;
             }
         }
@@ -100,17 +100,15 @@ class Program
 
         ViewTasks();
 
-        Console.Write("Enter task number to remove: ");
-        string input = Console.ReadLine();
-
-        int taskNumber;
-        bool isNumber = int.TryParse(input, out taskNumber);
-
-        if (isNumber && taskNumber >= 1 && taskNumber <= tasks.Count)
+        Console.Write("\nEnter task number to remove: ");
+          
+          if (int.TryParse(Console.ReadLine(), out int taskNumber) &&
+            taskNumber >= 1 && taskNumber <= tasks.Count)
         {
             tasks.RemoveAt(taskNumber - 1);
             Console.WriteLine("Task removed!");
         }
+        
         else
         {
             Console.WriteLine("Invalid number!");
@@ -132,16 +130,13 @@ class Program
 
         ViewTasks();
         Console.Write("\nEnter task number to mark as completed: ");
-        string input = Console.ReadLine();
-
-        int taskNumber;
-        bool isNumber = int.TryParse(input, out taskNumber);
-
-        if (isNumber && taskNumber >= 1 && taskNumber <= tasks.Count)
+         if (int.TryParse(Console.ReadLine(), out int taskNumber) &&
+            taskNumber >= 1 && taskNumber <= tasks.Count)
         {
             tasks[taskNumber - 1].IsCompleted = true;
             Console.WriteLine("Task completed!");
         }
+        
         else
         {
             Console.WriteLine("Invalid number!");
