@@ -33,10 +33,10 @@ What is blocking me?
 30/01/2026
 
 What did I work on?
-    We fixed the problems with tests.
+    We fixed the problems with tests and refactoring.
 
 What will I work on next?
-    We will work on refactor.
+    We will submit the assignment.
 
 What is blocking me?
     Nothing for now.

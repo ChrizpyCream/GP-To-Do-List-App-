@@ -32,8 +32,7 @@ class Program
 
                 case "3":
                     ViewTasks();
-                    Console.WriteLine("Press any key to return to the main menu.");
-                    Console.ReadKey(true);
+                    Pause();
                     break;
 
                 case "4":
@@ -42,9 +41,7 @@ class Program
 
                 case "5":
                     running = false;
-                    Console.Clear();
-                    Console.WriteLine("Bye.");
-                    Environment.Exit(0);
+                    Exit();
                     break;
 
                 default:
@@ -59,34 +56,39 @@ class Program
     {
         Console.Clear();
 
-        Console.WriteLine("--- Add New Task ---");
+        Console.WriteLine("✧⋄⋆⋅⋆⋄✧ Add New Task ✧⋄⋆⋅⋆⋄✧");
         Console.Write("What do you need to do? ");
         string taskDescription = Console.ReadLine();
 
-        System.Console.WriteLine("Enter due date (yyyy-mm-dd) or enter for default (7 days): ");
-        string dueDateInput = Console.ReadLine();
+        DateTime dueDate;
 
-        if (string.IsNullOrWhiteSpace(dueDateInput))
+        while (true)
         {
-            DateTime defaultDueDate = DateTime.Now.AddDays(7);
-            TodoTask newTask = new TodoTask(taskDescription, defaultDueDate);
-            tasks.Add(newTask);
-            Console.WriteLine("Task added with default due date (7 days)");
-        }
-        else if (!DateTime.TryParse(dueDateInput, out DateTime dueDate))
-        {
-            Console.WriteLine("Invalid date format. Please enter a valid date (yyyy-mm-dd).");
-            return;
-        }
-        else
-        {
-            TodoTask newTask = new TodoTask(taskDescription, dueDate);
-            tasks.Add(newTask);
-            Console.WriteLine("Task added with due date " + dueDate.ToString("yyyy-MM-dd"));
+            System.Console.WriteLine("Enter due date (yyyy-mm-dd) or press enter for default (7 days):");
+            string dueDateInput = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(dueDateInput))
+            {
+                dueDate = DateTime.Now.AddDays(7);
+                Console.WriteLine("Task added with default due date (7 days)");
+                break;
+            }
+            else if (!DateTime.TryParse(dueDateInput, out dueDate))
+            {
+                Console.WriteLine("Invalid date format. Please enter a valid date (yyyy-mm-dd).");
+                continue;
+            }
+            else
+            {
+                Console.WriteLine("Task added with due date " + dueDate.ToString("yyyy-MM-dd"));
+                break;
+            }
         }
 
-        Console.WriteLine("Press any key to return to the main menu");
-        Console.ReadKey(true);
+        TodoTask newTask = new TodoTask(taskDescription, dueDate);
+        tasks.Add(newTask);
+
+        Pause();
     }
 
     static void RemoveTask()
@@ -96,8 +98,7 @@ class Program
         if (tasks.Count == 0)
         {
             Console.WriteLine("No tasks to remove.");
-            Console.WriteLine("Press any key to return to the main menu.");
-            Console.ReadKey(true);
+            Pause();
             return;
         }
 
@@ -119,8 +120,7 @@ class Program
             Console.WriteLine("Invalid number!");
         }
 
-        Console.WriteLine("Press any key to return to the main menu.");
-        Console.ReadKey(true);
+        Pause();
     }
 
     static void MarkTaskCompleted()
@@ -130,8 +130,7 @@ class Program
         if (tasks.Count == 0)
         {
             Console.WriteLine("No tasks completed.");
-            Console.WriteLine("Press any key to return to the main menu.");
-            Console.ReadKey(true);
+            Pause();
             return;
         }
 
@@ -152,15 +151,14 @@ class Program
             Console.WriteLine("Invalid number!");
         }
 
-        Console.WriteLine("Press any key to return to the main menu.");
-        Console.ReadKey(true);
+        Pause();
     }
 
     static void ViewTasks()
     {
         Console.Clear();
 
-        Console.WriteLine("--- Your Tasks ---");
+        Console.WriteLine("✧⋄⋆⋅⋆⋄ Your Tasks ✧⋄⋆⋅⋆⋄✧");
 
         if (tasks.Count == 0)
         {
@@ -173,7 +171,7 @@ class Program
                 string status;
                 if (tasks[i].IsCompleted)
                 {
-                    status = "[✔️]";
+                    status = "[ ✔️ ]";
                 }
                 else
                 {
@@ -183,5 +181,24 @@ class Program
                 Console.WriteLine($"{i + 1}. {status} {tasks[i].Description}{tasks[i].DueDate.ToString(" (Due: yyyy-MM-dd)")}");
             }
         }
+    }
+
+    static void Pause()
+    {
+        Console.WriteLine("Press any key to return to the main menu.");
+        Console.ReadKey(true);
+    }
+
+    static void Exit()
+    {
+        Console.Clear();
+        Console.WriteLine(@"
+░██████╗░██░░░░░██╗░███████╗
+░██╔══██╗░██░░░██╔╝░██╔════╝
+░██████╔╝░╚██░██╔╝░░█████╗░░
+░██╔══██╗░░║███╔╝░░░██╔══╝░░
+░██████╔╝░░║███║░░░░███████╗
+░╚═════╝░░░╚═══╝░░░░╚══════╝");
+        Environment.Exit(0);
     }
 }
